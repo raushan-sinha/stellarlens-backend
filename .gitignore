@@ -1,0 +1,5 @@
+# Dependency folders (very heavy, don't upload)
+node_modules
+
+# Local environment secrets (STRICTLY PRIVATE)
+.env
