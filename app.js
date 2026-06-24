@@ -12,12 +12,11 @@ app.use(cors());
 // API call logic -
 app.get('/space-news', async (req, res) => {
     try {
-        console.log('API called')
         const response = await axios.get(process.env.NASA_API);
-        console.log(response.data)
+
         return res.status(200).json(response.data);
     } catch (error) {
-        console.error(error.response.data || error.message);
+        console.error(error);
         return res.status(500).json({ message: "Failed to fetch API" });
     }
 });
